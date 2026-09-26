@@ -32,7 +32,7 @@ st.sidebar.markdown(
 )
 
 # Elementos de la interfaz web
-ticker = st.text_input("Ticker de la empresa (Ej: AAPL, TSLA, DDOG):", "").strip().upper()
+ticker = st.text_input("Ticker de la empresa (Ej: AAPL, NVDA, TSLA):", "").strip().upper()
 
 opcion = st.selectbox(
     "Tipo de Análisis:",
