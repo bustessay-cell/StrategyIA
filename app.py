@@ -18,6 +18,17 @@ except Exception:
 if not api_key:
     api_key = st.sidebar.text_input("Introduce tu Gemini API Key", type="password")
 
+# --- AVISO LEGAL / DISCLAIMER ---
+st.sidebar.markdown("---")
+st.sidebar.markdown("### ⚠️ Aviso Legal")
+st.sidebar.markdown(
+    "**StrategyIA** es una herramienta experimental de análisis automatizado con fines "
+    "exclusivamente **educativos e informativos**. Los informes y tesis generadas "
+    "**no constituyen asesoramiento financiero, recomendación formal de inversión "
+    "ni una invitación a la compra o venta** de activos financieros. Consulte con un "
+    "profesional certificado antes de realizar cualquier inversión."
+)
+
 # Elementos de la interfaz web
 ticker = st.text_input("Ticker de la empresa (Ej: AAPL, TSLA, DDOG):", "").strip().upper()
 
@@ -75,7 +86,7 @@ if st.button("Generar Informe StrategyIA", type="primary"):
                     "1": "Analiza si su precio actual ofrece un buen margen de seguridad, desglosando su PER y justificando su capitalización actual.",
                     "2": "Evalúa a fondo su perfil de crecimiento puro y si cumple los requisitos para ser considerada un negocio 'Estrella' (Star) en su sector.",
                     "3": "¿Cuáles son las principales barreras de entrada o ventajas competitivas (moat) que la protegen y qué riesgos sectoriales amenazan su futuro?",
-                    "4": "Haz una recomendación táctica global (compra, mantenimiento o venta) basada en su valoración y perspectivas de negocio actuales."
+                    "4": "Haz una valoración de contexto sobre su posición de mercado (enfoque analítico de compra, mantenimiento o venta teórico) basada estrictamente en sus fundamentales y perspectivas de negocio actuales."
                 }
                 pregunta_usuario = preguntas_map.get(opcion)
                 
