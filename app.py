@@ -6,6 +6,8 @@ from google import genai
 st.set_page_config(page_title="StrategyIA", page_icon="🤖", layout="centered")
 
 st.title("🤖 StrategyIA - Asistente Estratégico de Inversión")
+st.markdown("*Desarrollado por **Oscar F. Bustinza**, Profesor de Estrategia de la Universidad de Granada.*")
+st.markdown("---")
 st.markdown("Selecciona una empresa y el enfoque estratégico deseado:")
 
 # Configurar API Key de forma segura (lee de Streamlit Secrets o pide introducirla)
